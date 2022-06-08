@@ -1,0 +1,7 @@
+<div class="container"> 
+<div *ngFor="let k of Knjige" class="book">
+<p>Book name: {{k.nazivKnjige}}</p>
+<p>Category: {{k.kategorijaknjige.ime}}</p>
+<button (click)="Delete(k.id)" >Delete book</button>
+</div>
+</div>

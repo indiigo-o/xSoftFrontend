@@ -1,0 +1,21 @@
+<div class="container">
+ 
+    <div class="left-column">
+      <img src="{{Knjiga.slikaKnjige}}" alt="">
+    </div>
+   
+    <div class="right-column">
+      <div class="product-description">
+        <h1>{{Knjiga.nazivKnjige}}</h1>  
+        <span>Autor: {{Knjiga.autorKnjige}}</span> <br>
+        <span>Genre: {{Knjiga.kategorijaknjige.ime}}</span><br>
+        <span>Language: {{Knjiga.jezik}}</span><br>
+        <span>Release date: {{Knjiga.godinaIzdavanja}}</span><br>
+        <p>Details:{{Knjiga.detaljanOpis}}</p>
+      </div>
+   
+        <a  *ngIf="isLog==false" href="login" class="btn">Log in to read</a>
+
+        <a *ngIf="isLog==true" href="{{Knjiga.knjigapdf}}" target="_blank" class="btn">Read or download .pdf</a>
+    </div>
+</div>
