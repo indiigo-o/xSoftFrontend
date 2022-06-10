@@ -10,9 +10,12 @@ import { Router } from '@angular/router';
   templateUrl: './login-page.component.html',
   styleUrls: ['./login-page.component.css']
 })
+
 export class LoginPageComponent implements OnInit {
+
   txtUsername:any;
   txtPassword:any;
+
   constructor(private httpKlijent: HttpClient,private  router :Router) { }
 
   ngOnInit(): void {
@@ -34,14 +37,14 @@ export class LoginPageComponent implements OnInit {
         alert("Welcome!");
         this.router.navigate([''])
         .then(() => {
-           window.location.reload();
+          window.location.reload();
          });
       }
       else{
         AutentifikacijaHelper.setLoginInfo(null as any)
         alert("Neispravan login,pokusajte ponovo!" );
       }
-
     });
   }
+
 }

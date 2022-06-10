@@ -14,7 +14,6 @@ export class AutentifikacijaHelper {
       let x = localStorage.getItem("autentifikacija-token");
       if (x==="")
         return new LoginInformacije();
-
       try {
         let loginInformacije:LoginInformacije = JSON.parse(x ||'{}');
         if (loginInformacije==null)

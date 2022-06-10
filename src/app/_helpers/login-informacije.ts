@@ -2,7 +2,6 @@
 export class LoginInformacije {
   autentifikacijaToken:        AutentifikacijaToken=  null as any;
   isLogiran:                   boolean=false;
-
 }
 
 export interface AutentifikacijaToken {
@@ -15,4 +14,4 @@ export interface AutentifikacijaToken {
   export interface KorisnickiNalog {
     id:                 number;
     korisnickoIme:      string;
-  }
+}

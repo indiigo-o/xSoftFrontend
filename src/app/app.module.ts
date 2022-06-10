@@ -9,6 +9,7 @@ import { LoginPageComponent } from './login-page/login-page.component';
 import { RegistrationPageComponent } from './registration-page/registration-page.component';
 import { ProductPageComponent } from './product-page/product-page.component';
 import { DeleteBookComponent } from './delete-book/delete-book.component';
+import {NgxPaginationModule} from "ngx-pagination";
 
 @NgModule({
   declarations: [
@@ -25,6 +26,8 @@ import { DeleteBookComponent } from './delete-book/delete-book.component';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    NgxPaginationModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

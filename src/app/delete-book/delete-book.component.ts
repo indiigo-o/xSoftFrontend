@@ -9,12 +9,15 @@ import { AutentifikacijaHelper } from '../_helpers/autentifikacija-helper';
   styleUrls: ['./delete-book.component.css']
 })
 export class DeleteBookComponent implements OnInit {
+
   Knjige:any;
+
   constructor(private httpKlijent: HttpClient,) { }
 
   ngOnInit(): void {
     this.UcitajKnjige();
   }
+
   UcitajKnjige(){
     this.httpKlijent.get("https://localhost:44308/Knjiga/GetAll")
     .subscribe(x=>{
@@ -22,6 +25,7 @@ export class DeleteBookComponent implements OnInit {
       this.Knjige = x;
     });
   }
+
   Delete(id:any){
     if(AutentifikacijaHelper.getLoginInfo().autentifikacijaToken.vrijednost!=null){
     this.httpKlijent.delete("https://localhost:44308/Knjiga/Delete/" + id)
@@ -30,4 +34,5 @@ export class DeleteBookComponent implements OnInit {
         this.UcitajKnjige();
     });
   }}
+  
 }

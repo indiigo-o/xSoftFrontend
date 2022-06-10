@@ -13,11 +13,15 @@ Knjige:any;
 Zamjena:any;
 searchtext : any;
 
-  constructor(private httpKlijent: HttpClient,private  router :Router) { }
+totalLength:any;
+page:number = 1;
+
+constructor(private httpKlijent: HttpClient,private  router :Router) { }
 
   ngOnInit(): void {
     this.UcitajKnjige();
   }
+
   UcitajKnjige(){
     this.httpKlijent.get("https://localhost:44308/Knjiga/GetAll")
     .subscribe(x=>{
@@ -27,6 +31,7 @@ searchtext : any;
 
     });
   }
+
   Search()
   {
     console.log(this.searchtext);
@@ -38,6 +43,5 @@ searchtext : any;
      return this.Knjige=this.Zamjena.filter((x:any)=> x.nazivKnjige.toLowerCase().includes(this.searchtext));
     }
   }
-
 
 }

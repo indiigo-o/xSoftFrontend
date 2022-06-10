@@ -7,6 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./registration-page.component.css']
 })
 export class RegistrationPageComponent implements OnInit {
+
   txtUsername:any;
   txtPassword:any;
   txtIme:any;
@@ -19,6 +20,7 @@ export class RegistrationPageComponent implements OnInit {
 
   Spolovi:any;
   Gradovi:any;
+
   constructor(private httpKlijent: HttpClient,private  router :Router) { }
 
   ngOnInit(): void {
@@ -34,6 +36,7 @@ export class RegistrationPageComponent implements OnInit {
     this.Gradovi=x;
 
   })}
+
   UcitajSpolove() {
     this.httpKlijent.get("https://localhost:44308/Spol/GetAll").subscribe((x: any) => {
       console.log("Spolovi",x);
@@ -62,9 +65,8 @@ export class RegistrationPageComponent implements OnInit {
         this.router.navigateByUrl("/login");
       }
       else{
-        alert("Neispravna registracija" );
+        alert("Neispravna registracija ili username vec postoji" );
       }
-     
     });
   }
 }

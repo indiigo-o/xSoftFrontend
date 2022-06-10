@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./product-page.component.css']
 })
 export class ProductPageComponent implements OnInit {
+  
   idKnjige:any= Number(this.route.snapshot.paramMap.get('id'));
   Knjiga:any;
   isLog:boolean=AutentifikacijaHelper.getLoginInfo().isLogiran;
@@ -25,7 +26,7 @@ export class ProductPageComponent implements OnInit {
     .subscribe(x=>{
       console.log("Knjiga", x);
       this.Knjiga = x;
-
     });
   }
+  
 }

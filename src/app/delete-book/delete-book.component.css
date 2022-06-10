@@ -3,6 +3,7 @@
     flex-wrap: wrap;
     justify-content: center;
 }
+
 .book {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     width: 90%;
@@ -10,6 +11,7 @@
     text-align: center;
     font-family: arial;
   }
+
   button {
     background-color: red;
     color: white;

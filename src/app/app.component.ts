@@ -8,10 +8,13 @@ import {Router} from "@angular/router";
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent {
   title = 'x-softFrontend';
+
   isLog:boolean = AutentifikacijaHelper.getLoginInfo().isLogiran;
   Kategorije:any;
+
   constructor(private httpKlijent: HttpClient, private router: Router) {
   }
 
@@ -34,4 +37,5 @@ export class AppComponent {
   
   }
   }
+  
 }

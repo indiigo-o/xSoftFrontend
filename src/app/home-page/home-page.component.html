@@ -2,15 +2,18 @@
   <input [(ngModel)]="searchtext" (ngModelChange)="Search()" type="text" placeholder="Search.." name="search">
 </form>
 <div class="container">
-<div *ngFor="let k of Knjige" class="card" >
+<div *ngFor="let k of Knjige | paginate: {itemsPerPage:5,currentPage:page,totalItems:totalLength}" class="card" >
   <div class="img">
     <img src="{{k.slikaKnjige}}" style="width:100%">
   </div>
-    <h1>{{k.nazivKnjige}}</h1>
+    <h1 class="name">{{k.nazivKnjige}}</h1>
     <p class="category">{{k.kategorijaknjige.ime}}</p>
     <a href="product-page/{{k.id}}"><p><button>Open book details</button></p></a>
   </div>
 </div>
+
+<pagination-controls  class="text-center" (pageChange)="page = $event"></pagination-controls>
+
 <div class="footer">
   <p>All rights reserved</p>
 </div>
