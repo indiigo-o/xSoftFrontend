@@ -75,7 +75,40 @@ html, body {
     padding: 12px 30px;
     transition: all .5s;
   }
-  
+
   .btn:hover {
     background-color: #64af3d;
+  }
+
+  @media screen and (max-width: 600px) {
+    img{
+      max-width: 100%;
+      max-height: 100%;
+  }
+
+  .left-column img {
+    width: 100%;
+    position: relative;
+    transition: all 0.3s ease;
+  } 
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 15px;
+      display: flex;
+    }
+
+    .left-column {
+      margin: 0;
+      width: 100%;
+      position: relative;
+    }
+  
+    .right-column {
+      width: 100%;
+      margin-top: 10px;
+    }
   }
