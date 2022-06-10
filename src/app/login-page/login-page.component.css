@@ -25,6 +25,7 @@ button:hover {
 }
 
 .containerm{
+    background-color: rgb(222, 222, 222);
     border: 2px solid #333;
     border-radius: 10px;
     box-shadow: 10px 5px 5px #333;

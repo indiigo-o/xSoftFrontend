@@ -42,7 +42,7 @@ export class LoginPageComponent implements OnInit {
       }
       else{
         AutentifikacijaHelper.setLoginInfo(null as any)
-        alert("Neispravan login,pokusajte ponovo!" );
+        alert("Login failed, please try again!" );
       }
     });
   }

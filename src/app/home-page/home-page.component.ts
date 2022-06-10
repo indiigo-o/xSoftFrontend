@@ -23,13 +23,14 @@ constructor(private httpKlijent: HttpClient,private  router :Router) { }
   }
 
   UcitajKnjige(){
+    
     this.httpKlijent.get("https://localhost:44308/Knjiga/GetAll")
     .subscribe(x=>{
       console.log("Knjige", x);
       this.Knjige = x;
       this.Zamjena=x;
-
     });
+
   }
 
   Search()

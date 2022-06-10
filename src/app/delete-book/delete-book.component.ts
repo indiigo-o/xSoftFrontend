@@ -30,9 +30,9 @@ export class DeleteBookComponent implements OnInit {
     if(AutentifikacijaHelper.getLoginInfo().autentifikacijaToken.vrijednost!=null){
     this.httpKlijent.delete("https://localhost:44308/Knjiga/Delete/" + id)
     .subscribe(x=>{
-        alert("Knjiga uspjesno izbrisana");
+        alert("Book deleted successfully!");
         this.UcitajKnjige();
     });
   }}
-  
+
 }

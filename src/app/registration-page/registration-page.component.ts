@@ -45,6 +45,7 @@ export class RegistrationPageComponent implements OnInit {
   }
 
   Registration(){
+
     let saljemo={
       ime: this.txtIme,
       prezime: this.txtPrezime,
@@ -55,18 +56,19 @@ export class RegistrationPageComponent implements OnInit {
       lozinka: this.txtPassword,
       grad_id: this.txtGrad,
       spol_id: this.txtSpol
-    
     };
+
     this.httpKlijent.post("https://localhost:44308/Korisnik/Add", saljemo)
     .subscribe((x:any)=>{
       if(x !=null)
       {
-        alert("Uspjesna registracija");
+        alert("Registration successfull!");
         this.router.navigateByUrl("/login");
       }
       else{
-        alert("Neispravna registracija ili username vec postoji" );
+        alert("Registration failed or username already exists!" );
       }
     });
+    
   }
 }
