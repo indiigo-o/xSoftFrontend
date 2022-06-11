@@ -2,7 +2,7 @@
   <input [(ngModel)]="searchtext" (ngModelChange)="Search()" type="text" placeholder="Search.." name="search">
 </form>
 <div class="container">
-<div *ngFor="let k of Knjige | paginate: {itemsPerPage:5,currentPage:page,totalItems:totalLength}" class="card" >
+<div *ngFor="let k of Knjige | paginate: {itemsPerPage10,currentPage:page,totalItems:totalLength}" class="card" >
   <div class="img">
     <img src="{{k.slikaKnjige}}" style="width:100%">
   </div>
