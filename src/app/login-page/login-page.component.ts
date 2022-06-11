@@ -28,7 +28,7 @@ export class LoginPageComponent implements OnInit {
       lozinka:this.txtPassword
     };
 
-    this.httpKlijent.post<LoginInformacije>("https://localhost:44308/Autentifikacija/Login", saljemo)
+    this.httpKlijent.post<LoginInformacije>("https://xsoftbackend20220611111027.azurewebsites.net/Autentifikacija/Login", saljemo)
     .subscribe((x:LoginInformacije)=>{
       if(x !=null )
       {

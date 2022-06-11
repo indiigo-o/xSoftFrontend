@@ -24,7 +24,7 @@ constructor(private httpKlijent: HttpClient,private  router :Router) { }
 
   UcitajKnjige(){
     
-    this.httpKlijent.get("https://localhost:44308/Knjiga/GetAll")
+    this.httpKlijent.get("https://xsoftbackend20220611111027.azurewebsites.net/Knjiga/GetAll")
     .subscribe(x=>{
       console.log("Knjige", x);
       this.Knjige = x;

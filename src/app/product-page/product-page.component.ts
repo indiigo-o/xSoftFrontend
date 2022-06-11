@@ -22,7 +22,7 @@ export class ProductPageComponent implements OnInit {
   }
 
   UcitajKnjigu(){
-    this.httpKlijent.get("https://localhost:44308/Knjiga/Get/"+ this.idKnjige)
+    this.httpKlijent.get("https://xsoftbackend20220611111027.azurewebsites.net/Knjiga/Get/"+ this.idKnjige)
     .subscribe(x=>{
       console.log("Knjiga", x);
       this.Knjiga = x;

@@ -30,7 +30,7 @@ export class RegistrationPageComponent implements OnInit {
 
 
   UcitajGradove() {
-    this.httpKlijent.get("https://localhost:44308/Grad/GetAll")
+    this.httpKlijent.get("https://xsoftbackend20220611111027.azurewebsites.net/Grad/GetAll")
     .subscribe((x:any)=>{
     console.log("Gradovi",x);
     this.Gradovi=x;
@@ -38,7 +38,7 @@ export class RegistrationPageComponent implements OnInit {
   })}
 
   UcitajSpolove() {
-    this.httpKlijent.get("https://localhost:44308/Spol/GetAll").subscribe((x: any) => {
+    this.httpKlijent.get("https://xsoftbackend20220611111027.azurewebsites.net/Spol/GetAll").subscribe((x: any) => {
       console.log("Spolovi",x);
       this.Spolovi = x;
     })
@@ -58,7 +58,7 @@ export class RegistrationPageComponent implements OnInit {
       spol_id: this.txtSpol
     };
 
-    this.httpKlijent.post("https://localhost:44308/Korisnik/Add", saljemo)
+    this.httpKlijent.post("https://xsoftbackend20220611111027.azurewebsites.net/Korisnik/Add", saljemo)
     .subscribe((x:any)=>{
       if(x !=null)
       {

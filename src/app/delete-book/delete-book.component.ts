@@ -19,7 +19,7 @@ export class DeleteBookComponent implements OnInit {
   }
 
   UcitajKnjige(){
-    this.httpKlijent.get("https://localhost:44308/Knjiga/GetAll")
+    this.httpKlijent.get("https://xsoftbackend20220611111027.azurewebsites.net/Knjiga/GetAll")
     .subscribe(x=>{
       console.log("Knjige", x);
       this.Knjige = x;
@@ -28,7 +28,7 @@ export class DeleteBookComponent implements OnInit {
 
   Delete(id:any){
     if(AutentifikacijaHelper.getLoginInfo().autentifikacijaToken.vrijednost!=null){
-    this.httpKlijent.delete("https://localhost:44308/Knjiga/Delete/" + id)
+    this.httpKlijent.delete("https://xsoftbackend20220611111027.azurewebsites.net/Knjiga/Delete/" + id)
     .subscribe(x=>{
         alert("Book deleted successfully!");
         this.UcitajKnjige();

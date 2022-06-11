@@ -20,7 +20,7 @@ export class AppComponent {
 
   logout(){
     if(this.isLog==true){
-      this.httpKlijent.post("https://localhost:44308/Autentifikacija/Logout", "")
+      this.httpKlijent.post("https://xsoftbackend20220611111027.azurewebsites.net/Autentifikacija/Logout", "")
       .subscribe((x:any)=>{
   
     })
