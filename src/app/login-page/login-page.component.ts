@@ -32,7 +32,6 @@ export class LoginPageComponent implements OnInit {
     .subscribe((x:LoginInformacije)=>{
       if(x !=null )
       {
-        console.log("x", x);
         AutentifikacijaHelper.setLoginInfo(x);
         alert("Welcome!");
         this.router.navigate([''])
