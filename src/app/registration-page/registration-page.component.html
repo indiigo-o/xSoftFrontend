@@ -12,8 +12,8 @@
         <input type="text" [(ngModel)]="txtAdresa" placeholder="Enter adress" name="psw-repeat" required>
     <div class="half">
         <input type="text" [(ngModel)]="txtUsername" placeholder="Enter Username" name="psw" required>
-        <input type="password" [(ngModel)]="txtPassword" placeholder="Enter Password" name="psw-repeat" required>
-    </div>
+        <input [type]="show ? 'text' : 'password'" [(ngModel)]="txtPassword" placeholder="Enter Password" name="psw-repeat" required style="">
+        <a class="fa fa-eye showhide" style="font-size:20px; margin-top: 4%;" (click)="password()"></a><br>    </div>
 	<select  class="form-control"  name="code" size="1" [(ngModel)]="txtSpol">
         <option value="undefined" disabled selected>
             Odaberi spol
