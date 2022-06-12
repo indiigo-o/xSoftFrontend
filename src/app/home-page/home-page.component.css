@@ -7,15 +7,19 @@ body {
   }
 
 form.example input[type=text] {
-  margin-top: 0px;
+  margin-top: 10px;
+  margin-bottom: 0px;
   padding: 3px;
   font-size: 17px;
   border: 1px solid grey;
-  border-top: none;
-  width: 100%;
   color: white;
   background: #333;
-  }
+  width: 56%;
+  margin-left: 22%;
+  margin-right: 22%;
+  border-radius: 6px;
+
+}
 
 .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -26,8 +30,6 @@ form.example input[type=text] {
     font-family: arial;
     margin-bottom: 3%;
     margin-top: 3%;
-
-
 
   }
 
@@ -66,13 +68,15 @@ form.example input[type=text] {
     border: none;
     outline: 0;
     padding: 12px;
-    color: white;
+    color: rgb(176, 176, 176);
     background-color: #333;
     text-align: center;
     cursor: pointer;
     width: 100%;
     font-size: 18px;
     height: 25%;
+    border-radius: 6px;
+
   } 
 
   .card button:hover {
