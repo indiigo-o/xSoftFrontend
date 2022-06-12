@@ -24,7 +24,7 @@ hr {
   margin-bottom: 25px;
 }
 
-button {
+button,a {
   background-color: #04AA6D;
   color: white;
   padding: 14px 20px;
@@ -33,26 +33,13 @@ button {
   cursor: pointer;
   width: 100%;
   opacity: 0.9;
+  text-decoration:none;
 }
 
-button:hover {
+button,a:hover {
   opacity:1;
 }
 
-a{
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-    opacity: 0.9;
-}
-
-a:hover{
-    opacity:1;
-
-}
 
 .cancelbtn {
   padding: 14px 20px;
