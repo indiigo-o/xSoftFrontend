@@ -92,4 +92,8 @@ justify-content: center;
   .cancelbtn, .signupbtn {
      width: 100%;
   }
+  
+  .containerm{
+    width: 80%;
+  }
 }
