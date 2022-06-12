@@ -20,9 +20,6 @@ export class RegistrationPageComponent implements OnInit {
 
   Spolovi:any;
   Gradovi:any;
-  
-  show: boolean = false;
-
 
   constructor(private httpKlijent: HttpClient,private  router :Router) { }
 
@@ -73,8 +70,5 @@ export class RegistrationPageComponent implements OnInit {
     
   }
   
-  password() {
-    this.show = !this.show;
-  }
   
 }
