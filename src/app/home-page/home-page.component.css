@@ -25,6 +25,9 @@ form.example input[type=text] {
     font-family: arial;
     margin-bottom: 3%;
     margin-top: 3%;
+
+
+
   }
 
 .container{
@@ -45,10 +48,11 @@ form.example input[type=text] {
     margin-bottom: 5px;
     color: grey;
     font-size: 22px;
+    height: 10%;
   }
 
   .img{
-    height: 45%;
+    height: 35%;
     object-fit: contain;
   }
 
@@ -67,7 +71,7 @@ form.example input[type=text] {
     cursor: pointer;
     width: 100%;
     font-size: 18px;
-
+    height: 25%;
   } 
 
   .card button:hover {
