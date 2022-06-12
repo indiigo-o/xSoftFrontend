@@ -25,7 +25,6 @@ export class AppComponent {
   
     })
     AutentifikacijaHelper.setLoginInfo(null as any);
-    console.log("isLogiran nakon logout", AutentifikacijaHelper.getLoginInfo().isLogiran);
     this.router.navigate([''])
     .then(() => {
       window.location.reload();
