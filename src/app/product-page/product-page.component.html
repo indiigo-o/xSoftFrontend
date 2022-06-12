@@ -11,7 +11,7 @@
         <span>Release date: {{Knjiga.godinaIzdavanja}}</span><br>
         <p>Details: {{Knjiga.detaljanOpis}}</p>
       </div>  
-        <a  *ngIf="isLog==false || 'undefined'" href="login" class="btn">Log in to read</a>
+        <a  *ngIf="isLog==false" href="login" class="btn">Log in to read</a>
         <a *ngIf="isLog==true" href="{{Knjiga.knjigapdf}}" target="_blank" class="btn">Read or download .pdf</a>
     </div>
 </div>
