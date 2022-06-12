@@ -40,8 +40,10 @@ button:hover {
 }
 
 a{
+   padding: 14px 20px;
+   margin: 8px 0;
    text-decoration: none;
-}
+   color: white;}
 
 a:hover{
     opacity:1;
