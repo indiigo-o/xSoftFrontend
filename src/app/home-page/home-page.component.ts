@@ -26,7 +26,6 @@ constructor(private httpKlijent: HttpClient,private  router :Router) { }
     
     this.httpKlijent.get("https://xsoftbackend20220611111027.azurewebsites.net/Knjiga/GetAll")
     .subscribe(x=>{
-      console.log("Knjige", x);
       this.Knjige = x;
       this.Zamjena=x;
     });
