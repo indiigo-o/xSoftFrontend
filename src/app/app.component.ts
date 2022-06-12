@@ -12,12 +12,16 @@ import {Router} from "@angular/router";
 export class AppComponent {
   title = 'x-softFrontend';
 
-  isLog:boolean = AutentifikacijaHelper.getLoginInfo().isLogiran;
+  isLog:boolean = false;
   Kategorije:any;
 
   constructor(private httpKlijent: HttpClient, private router: Router) {
   }
-
+  
+  ngOnInit(): void {
+    this.isLog=AutentifikacijaHelper.getLoginInfo().isLogiran;
+  }
+  
   logout(){
     if(this.isLog==true){
       this.httpKlijent.post("https://xsoftbackend20220611111027.azurewebsites.net/Autentifikacija/Logout", "")
