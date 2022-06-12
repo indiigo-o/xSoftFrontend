@@ -40,7 +40,7 @@ constructor(private httpKlijent: HttpClient,private  router :Router) { }
       this.ngOnInit();
     }
     else {
-     return this.Knjige=this.Zamjena.filter((x:any)=> x.nazivKnjige.toLowerCase().includes(this.searchtext));
+     return this.Knjige=this.Zamjena.filter((x:any)=> x.nazivKnjige.toLowerCase().includes(this.searchtext.toLowerCase()));
     }
   }
 
