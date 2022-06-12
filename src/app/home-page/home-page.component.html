@@ -1,13 +1,14 @@
-<form class="example">
+<div style="overflow: hidden;">
+<form class="example" action="/action_page.php">
   <input [(ngModel)]="searchtext" (ngModelChange)="Search()" type="text" placeholder="Search.." name="search">
-</form>
+</form></div>
 <div class="container">
 <div *ngFor="let k of Knjige | paginate: {itemsPerPage:8,currentPage:page,totalItems:totalLength}" class="card" >
   <div class="img">
     <img src="{{k.slikaKnjige}}" style="width:100%">
   </div>
     <h1 class="name">{{k.nazivKnjige}}</h1>
-    <h1 class="name" style="color:grey; ">{{k.autorKnjige}}</h1>
+    <h1 class="name" style="color:grey">{{k.autorKnjige}}</h1>
     <p class="category">{{k.kategorijaknjige.ime}}</p>
     <a href="product-page/{{k.id}}"><p><button>Open book details</button></p></a>
   </div>
