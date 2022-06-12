@@ -15,6 +15,9 @@ export class LoginPageComponent implements OnInit {
 
   txtUsername:any;
   txtPassword:any;
+  
+  show: boolean = false;
+
 
   constructor(private httpKlijent: HttpClient,private  router :Router) { }
 
@@ -45,5 +48,9 @@ export class LoginPageComponent implements OnInit {
       }
     });
   }
+  
+    password() {
+    this.show = !this.show;
+}
 
 }
