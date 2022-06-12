@@ -12,14 +12,10 @@ import {Router} from "@angular/router";
 export class AppComponent {
   title = 'x-softFrontend';
 
-  isLog:boolean = false;
+  isLog:boolean = AutentifikacijaHelper.getLoginInfo().isLogiran;
   Kategorije:any;
 
   constructor(private httpKlijent: HttpClient, private router: Router) {
-  }
-  
-  ngOnInit(): void {
-    this.isLog=AutentifikacijaHelper.getLoginInfo().isLogiran;
   }
   
   logout(){
