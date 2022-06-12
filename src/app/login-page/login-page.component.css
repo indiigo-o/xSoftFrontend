@@ -10,7 +10,7 @@ input[type=text], input[type=password] {
   box-sizing: border-box;
 }
 
-button,a {
+button {
   background-color: #04AA6D;
   color: white;
   padding: 14px 20px;
@@ -21,8 +21,15 @@ button,a {
   text-decoration:none;
 }
 
-button,a:hover {
+button:hover {
   opacity: 0.8;
+  cursor: pointer;
+
+}
+
+a:hover{
+  opacity: 0.8;
+  cursor: pointer;
 }
 
 .containerm{
