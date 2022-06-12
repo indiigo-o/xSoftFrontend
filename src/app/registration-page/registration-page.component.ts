@@ -32,14 +32,12 @@ export class RegistrationPageComponent implements OnInit {
   UcitajGradove() {
     this.httpKlijent.get("https://xsoftbackend20220611111027.azurewebsites.net/Grad/GetAll")
     .subscribe((x:any)=>{
-    console.log("Gradovi",x);
     this.Gradovi=x;
 
   })}
 
   UcitajSpolove() {
     this.httpKlijent.get("https://xsoftbackend20220611111027.azurewebsites.net/Spol/GetAll").subscribe((x: any) => {
-      console.log("Spolovi",x);
       this.Spolovi = x;
     })
   }
