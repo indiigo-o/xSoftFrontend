@@ -1,41 +1,38 @@
-<div class="containerm"> 
-    <div class="container">
-        <h1>Sign Up</h1>
-        <hr>
-        <div class="half">
-        <input [(ngModel)]="txtIme" type="text" placeholder="Enter name" name="psw" required>    
-        <input type="text" placeholder="Enter last name" name="psw-repeat" required>
-        </div>
-        <input type="text" [(ngModel)]="txtPrezime" placeholder="Enter Email" name="email" required>
-        <label for="email"><b>Enter date of birth</b></label>
-        <input type="date" [(ngModel)]="txtDatum" placeholder="Enter date of birth" name="email" required>
-        <input type="text" [(ngModel)]="txtAdresa" placeholder="Enter adress" name="psw-repeat" required>
+<div class="containerm">
+  <div class="container">
+    <h1>Sign Up</h1>
+    <hr>
     <div class="half">
-        <input type="text" [(ngModel)]="txtUsername" placeholder="Enter Username" name="psw" required>
-        <input type="password" [(ngModel)]="txtPassword" placeholder="Enter Password" name="psw-repeat" required style="">
-        </div>
-	<select  class="form-control"  name="code" size="1" [(ngModel)]="txtSpol">
-        <option value="undefined" disabled selected>
-            Odaberi spol
-          </option>
-        <option *ngFor="let obj of Spolovi" name="txtSpol"
-         [ngValue]="obj.id"
-          ngDefaultControl>{{obj?.ime}}</option>
-        </select>
-        <select  class="form-control"  name="code" size="1" [(ngModel)]="txtGrad">
-            <option value="undefined" disabled selected>
-                Odaberi grad
-              </option>
-            <option *ngFor="let obj of Gradovi" name="txtSpol"   
-             [ngValue]="obj.id"   
-              ngDefaultControl>{{obj?.naziv}}</option>
-                </select>          
-        <p>By creating an account you agree to our
-          <a href="https://policies.google.com/privacy?hl=en-US" style="color:dodgerblue">Terms & Privacy</a>
-          .</p>
-        <div class="clearfix">
-          <a  class="cancelbtn" href="login">Cancel</a>
-          <button  class="signupbtn" (click)="Registration()">Sign Up</button>
-        </div>
-      </div>
+      <input [(ngModel)]="txtIme" type="text" placeholder="Enter name" name="psw" required>
+      <input type="text" placeholder="Enter last name" name="psw-repeat" required>
+    </div>
+    <input type="text" [(ngModel)]="txtPrezime" placeholder="Enter Email" name="email" required>
+    <label for="email"><b>Enter date of birth</b></label>
+    <input type="date" [(ngModel)]="txtDatum" placeholder="Enter date of birth" name="email" required>
+    <input type="text" [(ngModel)]="txtAdresa" placeholder="Enter adress" name="psw-repeat" required>
+    <div class="half">
+      <input type="text" [(ngModel)]="txtUsername" placeholder="Enter Username" name="psw" required>
+      <input type="password" [(ngModel)]="txtPassword" placeholder="Enter Password" name="psw-repeat" required style="">
+    </div>
+    <select class="form-control" name="code" size="1" [(ngModel)]="txtSpol">
+      <option value="undefined" disabled selected>
+        Odaberi spol
+      </option>
+      <option *ngFor="let obj of Spolovi" name="txtSpol" [ngValue]="obj.id" ngDefaultControl>{{obj?.ime}}</option>
+    </select>
+    <select class="form-control" name="code" size="1" [(ngModel)]="txtGrad">
+      <option value="undefined" disabled selected>
+        Odaberi grad
+      </option>
+      <option *ngFor="let obj of Gradovi" name="txtSpol" [ngValue]="obj.id" ngDefaultControl>{{obj?.naziv}}</option>
+    </select>
+    <p>By creating an account you agree to our
+      <a href="https://policies.google.com/privacy?hl=en-US" style="color:dodgerblue">Terms & Privacy</a>
+      .
+    </p>
+    <div class="clearfix">
+      <a class="cancelbtn" href="login">Cancel</a>
+      <button class="signupbtn" (click)="Registration()">Sign Up</button>
+    </div>
+  </div>
 </div>

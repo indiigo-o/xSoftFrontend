@@ -10,22 +10,22 @@ import { Router } from '@angular/router';
   styleUrls: ['./product-page.component.css']
 })
 export class ProductPageComponent implements OnInit {
-  
-  idKnjige:any= Number(this.route.snapshot.paramMap.get('id'));
-  Knjiga:any;
-  isLog:boolean=AutentifikacijaHelper.getLoginInfo().isLogiran;
 
-  constructor(private route: ActivatedRoute,private httpKlijent: HttpClient, private  router :Router) { }
+  idKnjige: any = Number(this.route.snapshot.paramMap.get('id'));
+  Knjiga: any;
+  isLog: boolean = AutentifikacijaHelper.getLoginInfo().isLogiran;
+
+  constructor(private route: ActivatedRoute, private httpKlijent: HttpClient, private router: Router) { }
 
   ngOnInit(): void {
     this.UcitajKnjigu();
   }
 
-  UcitajKnjigu(){
-    this.httpKlijent.get("https://xsoftbackend20220611111027.azurewebsites.net/Knjiga/Get/"+ this.idKnjige)
-    .subscribe(x=>{
-      this.Knjiga = x;
-    });
+  UcitajKnjigu() {
+    this.httpKlijent.get("https://xsoftbackend20220611111027.azurewebsites.net/Knjiga/Get/" + this.idKnjige)
+      .subscribe(x => {
+        this.Knjiga = x;
+      });
   }
-  
+
 }

@@ -7,11 +7,11 @@ import { ProductPageComponent } from './product-page/product-page.component';
 import { RegistrationPageComponent } from './registration-page/registration-page.component';
 
 const routes: Routes = [
-  {path:'',component:HomePageComponent},
-  {path:'login',component:LoginPageComponent},
-  {path:'registration',component:RegistrationPageComponent},
-  {path:'product-page/:id',component:ProductPageComponent},
-  {path:'delete-book',component:DeleteBookComponent},
+  { path: '', component: HomePageComponent },
+  { path: 'login', component: LoginPageComponent },
+  { path: 'registration', component: RegistrationPageComponent },
+  { path: 'product-page/:id', component: ProductPageComponent },
+  { path: 'delete-book', component: DeleteBookComponent },
 
 ];
 

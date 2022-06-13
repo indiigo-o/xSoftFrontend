@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {HttpClient } from "@angular/common/http";
+import { HttpClient } from "@angular/common/http";
 import { AutentifikacijaHelper } from '../_helpers/autentifikacija-helper';
 
 
@@ -10,7 +10,7 @@ import { AutentifikacijaHelper } from '../_helpers/autentifikacija-helper';
 })
 export class DeleteBookComponent implements OnInit {
 
-  Knjige:any;
+  Knjige: any;
 
   constructor(private httpKlijent: HttpClient,) { }
 
@@ -18,20 +18,21 @@ export class DeleteBookComponent implements OnInit {
     this.UcitajKnjige();
   }
 
-  UcitajKnjige(){
+  UcitajKnjige() {
     this.httpKlijent.get("https://xsoftbackend20220611111027.azurewebsites.net/Knjiga/GetAll")
-    .subscribe(x=>{
-      this.Knjige = x;
-    });
+      .subscribe(x => {
+        this.Knjige = x;
+      });
   }
 
-  Delete(id:any){
-    if(AutentifikacijaHelper.getLoginInfo().autentifikacijaToken.vrijednost!=null){
-    this.httpKlijent.delete("https://xsoftbackend20220611111027.azurewebsites.net/Knjiga/Delete/" + id)
-    .subscribe(x=>{
-        alert("Book deleted successfully!");
-        this.UcitajKnjige();
-    });
-  }}
+  Delete(id: any) {
+    if (AutentifikacijaHelper.getLoginInfo().autentifikacijaToken.vrijednost != null) {
+      this.httpKlijent.delete("https://xsoftbackend20220611111027.azurewebsites.net/Knjiga/Delete/" + id)
+        .subscribe(x => {
+          alert("Book deleted successfully!");
+          this.UcitajKnjige();
+        });
+    }
+  }
 
 }

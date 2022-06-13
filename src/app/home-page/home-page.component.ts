@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {HttpClient } from "@angular/common/http";
+import { HttpClient } from "@angular/common/http";
 import { Router } from '@angular/router';
 
 @Component({
@@ -9,38 +9,36 @@ import { Router } from '@angular/router';
 })
 export class HomePageComponent implements OnInit {
 
-Knjige:any;
-Zamjena:any;
-searchtext : any;
+  Knjige: any;
+  Zamjena: any;
+  searchtext: any;
 
-totalLength:any;
-page:number = 1;
+  totalLength: any;
+  page: number = 1;
 
-constructor(private httpKlijent: HttpClient,private  router :Router) { }
+  constructor(private httpKlijent: HttpClient, private router: Router) { }
 
   ngOnInit(): void {
     this.UcitajKnjige();
   }
 
-  UcitajKnjige(){
-    
+  UcitajKnjige() {
+
     this.httpKlijent.get("https://xsoftbackend20220611111027.azurewebsites.net/Knjiga/GetAll")
-    .subscribe(x=>{
-      this.Knjige = x;
-      this.Zamjena=x;
-    });
+      .subscribe(x => {
+        this.Knjige = x;
+        this.Zamjena = x;
+      });
 
   }
 
-  Search()
-  {
+  Search() {
     console.log(this.searchtext);
-    if(this.searchtext==" ")
-    {
+    if (this.searchtext == " ") {
       this.ngOnInit();
     }
     else {
-     return this.Knjige=this.Zamjena.filter((x:any)=> x.nazivKnjige.toLowerCase().includes(this.searchtext.toLowerCase()));
+      return this.Knjige = this.Zamjena.filter((x: any) => x.nazivKnjige.toLowerCase().includes(this.searchtext.toLowerCase()));
     }
   }
 

@@ -1,7 +1,16 @@
-body {font-family: Arial, Helvetica, sans-serif;}
-* {box-sizing: border-box}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
 
-input[type=text], input[type=password],input[type=date], select,option {
+* {
+  box-sizing: border-box
+}
+
+input[type=text],
+input[type=password],
+input[type=date],
+select,
+option {
   width: 100%;
   padding: 15px;
   margin: 5px 5px 22px 0;
@@ -10,11 +19,12 @@ input[type=text], input[type=password],input[type=date], select,option {
   background: #f1f1f1;
 }
 
-label{
-    color:grey;
+label {
+  color: grey;
 }
 
-input[type=text]:focus, input[type=password]:focus {
+input[type=text]:focus,
+input[type=password]:focus {
   background-color: #ddd;
   outline: none;
 }
@@ -36,28 +46,30 @@ button {
 }
 
 button:hover {
-  opacity:1;
+  opacity: 1;
 }
 
-a{
-   padding: 14px 20px;
-   margin: 8px 0;
-   text-decoration: none;
-   color: white;}
+a {
+  padding: 14px 20px;
+  margin: 8px 0;
+  text-decoration: none;
+  color: white;
+}
 
-a:hover{
-    opacity:1;
-    cursor: pointer;
+a:hover {
+  opacity: 1;
+  cursor: pointer;
 
 }
 
 .cancelbtn {
   padding: 14px 20px;
   background-color: #f44336;
-  
+
 }
 
-.cancelbtn, .signupbtn {
+.cancelbtn,
+.signupbtn {
   float: left;
   width: 50%;
 }
@@ -66,20 +78,20 @@ a:hover{
   padding: 16px;
 }
 
-.containerm{
-    border: 2px solid #333;
-    border-radius: 10px;
-    box-shadow: 10px 5px 5px #333;
-    width: 60%;
-    margin: auto;
-    margin-top: 20px;
-    background-color: rgb(222, 222, 222);
+.containerm {
+  border: 2px solid #333;
+  border-radius: 10px;
+  box-shadow: 10px 5px 5px #333;
+  width: 60%;
+  margin: auto;
+  margin-top: 20px;
+  background-color: rgb(222, 222, 222);
 }
 
-.half{
-    display:flex;
-    flex-direction: row;
-justify-content: center;
+.half {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .clearfix::after {
@@ -89,11 +101,13 @@ justify-content: center;
 }
 
 @media screen and (max-width: 600px) {
-  .cancelbtn, .signupbtn {
-     width: 100%;
+
+  .cancelbtn,
+  .signupbtn {
+    width: 100%;
   }
-  
-  .containerm{
+
+  .containerm {
     width: 80%;
   }
 }
