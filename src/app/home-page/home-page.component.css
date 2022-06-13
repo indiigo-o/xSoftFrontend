@@ -18,6 +18,7 @@ form.example input[type=text] {
   margin-left: 22%;
   margin-right: 22%;
   border-radius: 6px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 
 }
 
