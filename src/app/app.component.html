@@ -1,5 +1,5 @@
 <div class="topnav">
-  <a href="">Home</a>
+  <a class="nav-link" href="">Home</a>
   <a class="nav-link" (click)="logout()" >{{isLog ? 'Logout' : 'Login'}}</a>
   <a class="nav-link" *ngIf="isLog==false" href="registration">Sign-up</a>
   <a class="nav-link" *ngIf="isLog==true" href="delete-book">Delete Book</a>
