@@ -15,12 +15,8 @@ export class AppComponent {
   isLog: boolean = AutentifikacijaHelper.getLoginInfo().isLogiran;
   Kategorije: any;
 
-  korisnik: any = AutentifikacijaHelper.getLoginInfo().autentifikacijaToken.korisnickiNalogId;
-
   constructor(private httpKlijent: HttpClient, private router: Router) {
   }
-
-
 
   logout() {
     if (this.isLog == true) {
