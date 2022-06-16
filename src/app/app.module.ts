@@ -10,6 +10,7 @@ import { RegistrationPageComponent } from './registration-page/registration-page
 import { ProductPageComponent } from './product-page/product-page.component';
 import { DeleteBookComponent } from './delete-book/delete-book.component';
 import { NgxPaginationModule } from "ngx-pagination";
+import { ProfilePageComponent } from './profile-page/profile-page.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { NgxPaginationModule } from "ngx-pagination";
     RegistrationPageComponent,
     ProductPageComponent,
     DeleteBookComponent,
+    ProfilePageComponent,
 
   ],
   imports: [

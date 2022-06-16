@@ -1,0 +1,16 @@
+<body>
+    <main>
+        <section class="top-card">
+            <img src="https://t3.ftcdn.net/jpg/03/46/83/96/360_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg">
+        </section>
+
+        <section class="middle-card">
+            <h1>Name: {{Korisnik.ime}} {{Korisnik.prezime}}</h1>
+            <p><b>Date of birth: </b>{{Korisnik.datumRodjenja.substring(5,7)+
+                "."+Korisnik.datumRodjenja.substring(8,10)+"."+Korisnik.datumRodjenja.substring(0,4)}}</p>
+            <p><b>City:</b> {{Korisnik.grad.naziv}} {{Korisnik.grad.postanskiBroj}}</p>
+            <p><b>E-Mail:</b> {{Korisnik.email}}</p>
+        </section>
+
+    </main>
+</body>

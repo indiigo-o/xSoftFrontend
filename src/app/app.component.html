@@ -3,6 +3,8 @@
   <a (click)="logout()">{{isLog ? 'Logout' : 'Login'}}</a>
   <a *ngIf="isLog==false" href="registration">Sign-up</a>
   <a *ngIf="isLog==true" href="delete-book">Delete Book</a>
+  <a *ngIf="isLog==true" style="float:right;" href="profile/{{korisnik}}">Profile</a>
+
 </div>
 
 <div>

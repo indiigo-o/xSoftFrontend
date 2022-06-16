@@ -4,6 +4,7 @@ import { DeleteBookComponent } from './delete-book/delete-book.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { ProductPageComponent } from './product-page/product-page.component';
+import { ProfilePageComponent } from './profile-page/profile-page.component';
 import { RegistrationPageComponent } from './registration-page/registration-page.component';
 
 const routes: Routes = [
@@ -12,6 +13,7 @@ const routes: Routes = [
   { path: 'registration', component: RegistrationPageComponent },
   { path: 'product-page/:id', component: ProductPageComponent },
   { path: 'delete-book', component: DeleteBookComponent },
+  { path: 'profile/:id', component: ProfilePageComponent },
 
 ];
 

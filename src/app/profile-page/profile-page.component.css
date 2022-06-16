@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+    width: 340px;
+    overflow: hidden;
+    background-color: #fdfcfc;
+    font-size: 16px;
+    line-height: 22px;
+    color: #000;
+    border-radius: 7px;
+    box-shadow: -4px -4px 20px rgba(0, 0, 0, 0.505);
+    margin: 10px auto;
+
+}
+
+.top-card {
+    width: 100%;
+}
+
+.top-card img {
+    width: 50%;
+    margin-left: 25%;
+}
+
+h1 {
+    font-size: 22px;
+    color: #000;
+    font-weight: 600;
+    margin: 12px 0;
+    text-align: center;
+
+}
+
+p {
+    font-size: 12px;
+    color: #333;
+    font-weight: 400;
+    text-align: center;
+
+}
+
+.middle-card,
+footer {
+    margin: 5px 25px;
+}
+
+.middle-card {
+    text-align: justify;
+}
